@@ -23,6 +23,9 @@ import ayuda from "../../assets/dashboard/ayuda.png"
 import styles from "../aside/aside.module.css"
 import styling from "./main.module.css"
 import Ventas from "./ventas/ventas";
+import VentaTypes from "./ventaTypes/ventaTypes";
+import Promociones from "./promociones/promociones";
+import Caja from "./caja/caja";
 
 
 
@@ -70,18 +73,18 @@ const handleBoard = (value, activeValue) => {
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container}>
+                <div className={styles.container} onClick={() => handleBoard("ventaTypes", false)}>
                     <img src={ventasType} className={styles.icon} alt="tipos-de-venta" />
                     <span>Tipos de venta</span>
                 </div>
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("promociones", false)}>
                     <div>
                         <img src={promociones} className={styles.icon} alt="promociones" />
                         <span>Promociones</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("caja", false)}>
                     <div >
                         <img src={caja} className={styles.icon} alt="caja" />
                         <span>Caja</span>
@@ -134,6 +137,9 @@ const handleBoard = (value, activeValue) => {
             { main === "dashboard" && <Dashboard/> }
             { main === "catalogo" && <Catalogo/> }
             { main === "ventas" && <Ventas/> }
+            { main === "ventaTypes" && <VentaTypes/> }
+            { main === "promociones" && <Promociones/> }
+            { main === "caja" && <Caja/> }
 
         </section>
     )
