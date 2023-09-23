@@ -20,6 +20,7 @@ import divider from "../../assets/dashboard/divider.png"
 import config from "../../assets/dashboard/config.png"
 import ayuda from "../../assets/dashboard/ayuda.png"
 import line from "../../assets/dashboard/line.png"
+import redLine from "../../assets/dashboard/redLine.png"
 
 import styles from "../aside/aside.module.css"
 import styling from "./main.module.css"
@@ -40,16 +41,19 @@ export default function Main () {
 const [ main, setMain ] = useState("");
 const [ active, setActive ] = useState(true)
 const [ indexing, setIndexing] = useState(undefined);
+const [ redLinePosition, setRedLinePosition] = useState(5);
 
-const handleBoard = (value, activeValue, indexValue ) => {
+const handleBoard = (value, activeValue, indexValue, positionLine ) => {
     setMain(value)
     setActive(activeValue)
     setIndexing(indexValue)
+    setRedLinePosition(positionLine)
 }; 
     const modeOne = styles.containerWith
     const modeTwo = styles.container
     const classNameSelected = styles.selectedItem
     const classNameSelectedAlter = styles.selectedItemAlter
+    // const redLineClassName = style.redLineCategorias
 
     return(
         <section className={style.container}>
@@ -70,16 +74,33 @@ const handleBoard = (value, activeValue, indexValue ) => {
                 {
                     main === "catalogo" && active === true ? 
                     <div className={styles.itemsDeployContainer}>
-                         <div>
-                        <img src={line} alt="" />
-                    </div>
-                    <div className={styling.deployContainer}>
-                        <span className={styling.deployItem}> categorias </span>
-                        <span className={styling.deployItem}> Productos y precios </span>
-                        <span className={styling.deployItem}> Complementos </span>
-                        <span className={styling.deployItem}> Modificaciones </span>
-                        <span className={styling.deployItem}> Menus y recetas </span>
-                    </div> 
+                         <div className={styles.linesContainer}>
+                            <img src={line}  className={styles.line} alt="line" />
+                            <img src={redLine} className={styles.redLine}
+                            style={
+                                redLinePosition === 1
+                                ? { marginTop: '7px' }
+                                : redLinePosition === 2
+                                ? { marginTop: '55px' }
+                                : redLinePosition === 3
+                                ? { marginTop: '105px' }
+                                : redLinePosition === 4
+                                ? { marginTop: '160px' }
+                                : redLinePosition === 5
+                                ? { marginTop: '210px' }
+                                : null
+                                
+                            }
+  alt="red-line"
+/>
+                        </div>
+                        <div className={styling.deployContainer}>
+                            <span className={styling.deployItem} onClick={() => handleBoard("catalogo", true, 1, 1)} > categorias </span>
+                            <span className={styling.deployItem}  onClick={() => handleBoard("catalogo", true, 1, 2)}> Productos y precios </span>
+                            <span className={styling.deployItem}  onClick={() => handleBoard("catalogo", true, 1, 3)}> Complementos </span>
+                            <span className={styling.deployItem}  onClick={() => handleBoard("catalogo", true, 1, 4)}> Modificaciones </span>
+                            <span className={styling.deployItem}  onClick={() => handleBoard("catalogo", true, 1, 5)}> Menus y recetas </span>
+                        </div> 
 
                     </div>: null
                    

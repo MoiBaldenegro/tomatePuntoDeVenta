@@ -9,7 +9,7 @@ section{
     transition: max-height 0.3s ease-in-out; 
 }
 .deployItem{
-    margin-left: 4vw;
+    margin-left: 1vw;
     width: 160px;
     height: 30px;
     font-family: sans-serif;
@@ -27,5 +27,4 @@ section{
 }
 .deployItem:hover{
     background-color: #f9f9f91f;
-    
 }

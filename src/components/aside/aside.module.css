@@ -132,12 +132,19 @@
  
  .iconDivider{
     width: 300px;
-    background-color: aqua;
  }
 
  .itemsDeployContainer{
     display: flex;
+    margin-left: 3vw;
  }
+
+ .redLine{
+    position: absolute;
+    margin-left: -4px;
+    margin-top: 5px;
+ }
+
  
   
   
