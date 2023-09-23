@@ -64,7 +64,7 @@ const handleBoard = (value, activeValue) => {
                 {
                     main === "catalogo" && active === true ? 
                     <div className={styling.deployContainer}>
-                        <span className={styling.deployItem}> categorias </span>
+                        <span className={styling.deployItem} onClick={() => handleBoard("categorias", true)}> categorias </span>
                         <span className={styling.deployItem}> Productos y precios </span>
                         <span className={styling.deployItem}> Complementos </span>
                         <span className={styling.deployItem}> Modificaciones </span>
