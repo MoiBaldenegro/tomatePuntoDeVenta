@@ -12,7 +12,6 @@
     box-shadow: 5px 5px 10px 0px #0000001A;
 }
 .sectionOne{
-    border: 1px solid #F9F9F933;
     width: 340px;
     height: 250vh;
     margin-top: 25px;
@@ -24,6 +23,10 @@
     width: 326px;
     height: 716px;
     margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 2vw;
 }
 .container{
     padding: 3px;
@@ -121,11 +124,25 @@
     background-color: #757575; 
 
   }
+ .configContainer{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+ }
+ 
+ .iconDivider{
+    width: 300px;
+    background-color: aqua;
+ }
+
+ .itemsDeployContainer{
+    display: flex;
+ }
  
   
   
   
-  
+
   
 
 

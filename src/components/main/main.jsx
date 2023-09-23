@@ -19,6 +19,7 @@ import reportes from "../../assets/dashboard/reportes.png"
 import divider from "../../assets/dashboard/divider.png"
 import config from "../../assets/dashboard/config.png"
 import ayuda from "../../assets/dashboard/ayuda.png"
+import line from "../../assets/dashboard/line.png"
 
 import styles from "../aside/aside.module.css"
 import styling from "./main.module.css"
@@ -68,13 +69,20 @@ const handleBoard = (value, activeValue, indexValue ) => {
                 </div>
                 {
                     main === "catalogo" && active === true ? 
+                    <div className={styles.itemsDeployContainer}>
+                         <div>
+                        <img src={line} alt="" />
+                    </div>
                     <div className={styling.deployContainer}>
                         <span className={styling.deployItem}> categorias </span>
                         <span className={styling.deployItem}> Productos y precios </span>
                         <span className={styling.deployItem}> Complementos </span>
                         <span className={styling.deployItem}> Modificaciones </span>
                         <span className={styling.deployItem}> Menus y recetas </span>
-                    </div> : null
+                    </div> 
+
+                    </div>: null
+                   
                 } 
                 <div className={indexing === 2 ? modeOne : classNameSelected} onClick={() => handleBoard("ventas", false, 2)}>
                     <div>
@@ -131,13 +139,13 @@ const handleBoard = (value, activeValue, indexValue ) => {
                     <span>Reportes</span>
                 </div>
             </div>
-            <img src={divider} className={styles.icon} alt="icon" />
+            <img src={divider} className={styles.iconDivider} alt="icon" />
             <div className={styles.sectionTwo}>
-                <div>
+                <div className={styles.configContainer}>
                     <img src={config} className={styles.icon} alt="configuraciones" />
                     <span>Configuracion</span>
                 </div>
-                <div>
+                <div className={styles.configContainer}>
                     <img src={ayuda} alt="ayuda" />
                     <span>Ayuda</span>
                 </div>
