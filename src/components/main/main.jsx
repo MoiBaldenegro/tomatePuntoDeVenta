@@ -22,12 +22,13 @@ import ayuda from "../../assets/dashboard/ayuda.png"
 
 import styles from "../aside/aside.module.css"
 import styling from "./main.module.css"
+import Ventas from "./ventas/ventas";
 
 
 
 export default function Main () {
 
-const [ main, setMain ] = useState("dasboard");
+const [ main, setMain ] = useState("");
 const [ active, setActive ] = useState(true)
 
 const handleBoard = (value, activeValue) => {
@@ -62,7 +63,7 @@ const handleBoard = (value, activeValue) => {
                         <span className={styling.deployItem}> Menus y recetas </span>
                     </div> : null
                 } 
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("ventas", false)}>
                     <div>
                         <img src={ventas} className={styles.icon} alt="ventas-icon" />
                         <span>Ventas</span>
@@ -70,61 +71,61 @@ const handleBoard = (value, activeValue) => {
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.container}>
-                    <img src={ventasType} className={styles.icon} alt="" />
+                    <img src={ventasType} className={styles.icon} alt="tipos-de-venta" />
                     <span>Tipos de venta</span>
                 </div>
                 <div className={styles.containerWith}>
                     <div>
-                        <img src={promociones} className={styles.icon} alt="" />
+                        <img src={promociones} className={styles.icon} alt="promociones" />
                         <span>Promociones</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.containerWith}>
                     <div >
-                        <img src={caja} className={styles.icon} alt="" />
+                        <img src={caja} className={styles.icon} alt="caja" />
                         <span>Caja</span>
                     </div>
                     <img src={arrow}  className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.container}>
-                    <img src={reservaciones} className={styles.icon} alt="" />
+                    <img src={reservaciones} className={styles.icon} alt="reservaciones" />
                     <span>Reservaciones</span>
                 </div>
                 <div className={styles.containerWith}>
                     <div >
-                        <img src={tableros} className={styles.icon} alt="" />
+                        <img src={tableros} className={styles.icon} alt="tableros" />
                         <span>Tableros</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.containerWith}>
                     <div >
-                        <img src={usuarios} className={styles.icon} alt="" />
+                        <img src={usuarios} className={styles.icon} alt="usuarios" />
                         <span>Usuarios</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.containerWith}>
                     <div >
-                        <img src={mesas} className={styles.icon} alt="" />
+                        <img src={mesas} className={styles.icon} alt="mesas" />
                         <span>Mesas</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
                 <div className={styles.container}>
-                    <img src={reportes} className={styles.icon} alt="" />
+                    <img src={reportes} className={styles.icon} alt="reportes" />
                     <span>Reportes</span>
                 </div>
             </div>
             <img src={divider} className={styles.icon} alt="icon" />
             <div className={styles.sectionTwo}>
                 <div>
-                    <img src={config} className={styles.icon} alt="" />
+                    <img src={config} className={styles.icon} alt="configuraciones" />
                     <span>Configuracion</span>
                 </div>
                 <div>
-                    <img src={ayuda} alt="" />
+                    <img src={ayuda} alt="ayuda" />
                     <span>Ayuda</span>
                 </div>
             </div>
@@ -132,6 +133,7 @@ const handleBoard = (value, activeValue) => {
             </div>
             { main === "dashboard" && <Dashboard/> }
             { main === "catalogo" && <Catalogo/> }
+            { main === "ventas" && <Ventas/> }
 
         </section>
     )
