@@ -150,9 +150,6 @@ const handleBoard = (value, activeValue) => {
             { main === "usuarios" && <Usuarios/> }
             { main === "mesas" && <Mesas/> }
             { main === "reportes" && <Reportes/> }
-
-
-
         </section>
     )
 }
