@@ -26,6 +26,11 @@ import Ventas from "./ventas/ventas";
 import VentaTypes from "./ventaTypes/ventaTypes";
 import Promociones from "./promociones/promociones";
 import Caja from "./caja/caja";
+import Reservaciones from "./reservaciones/reservaciones";
+import Tableros from "./tableros/tableros";
+import Mesas from "./mesas/mesas";
+import Usuarios from "./usuarios/usuarios";
+import Reportes from "./reportes/reportes";
 
 
 
@@ -91,32 +96,32 @@ const handleBoard = (value, activeValue) => {
                     </div>
                     <img src={arrow}  className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container}>
+                <div className={styles.container} onClick={() => handleBoard("reservaciones", false)}>
                     <img src={reservaciones} className={styles.icon} alt="reservaciones" />
                     <span>Reservaciones</span>
                 </div>
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("tableros", false)}>
                     <div >
                         <img src={tableros} className={styles.icon} alt="tableros" />
                         <span>Tableros</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("usuarios", false)}>
                     <div >
                         <img src={usuarios} className={styles.icon} alt="usuarios" />
                         <span>Usuarios</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith}>
+                <div className={styles.containerWith} onClick={() => handleBoard("mesas", false)}>
                     <div >
                         <img src={mesas} className={styles.icon} alt="mesas" />
                         <span>Mesas</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container}>
+                <div className={styles.container} onClick={() => handleBoard("reportes", false)}>
                     <img src={reportes} className={styles.icon} alt="reportes" />
                     <span>Reportes</span>
                 </div>
@@ -140,6 +145,13 @@ const handleBoard = (value, activeValue) => {
             { main === "ventaTypes" && <VentaTypes/> }
             { main === "promociones" && <Promociones/> }
             { main === "caja" && <Caja/> }
+            { main === "reservaciones" && <Reservaciones/> }
+            { main === "tableros" && <Tableros/> }
+            { main === "usuarios" && <Usuarios/> }
+            { main === "mesas" && <Mesas/> }
+            { main === "reportes" && <Reportes/> }
+
+
 
         </section>
     )
