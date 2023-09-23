@@ -12,9 +12,13 @@
     box-shadow: 5px 5px 10px 0px #0000001A;
 }
 .sectionOne{
-    width: 326px;
-    height: 716px;
+    border: 1px solid #F9F9F933;
+    width: 340px;
+    height: 250vh;
     margin-top: 25px;
+    max-height: 1200px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .sectionTwo{
     width: 326px;
@@ -101,6 +105,28 @@
     background-color:  #f9f9f915;
 }
 
+/*  ASIDE SCROLL BAR*/
+
+.sectionOne::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  .sectionOne::-webkit-scrollbar-thumb {
+    background-color: rgba(249, 249, 249, 0.15); 
+    border-radius: 5px; 
+
+  }
+  
+  .sectionOne::-webkit-scrollbar-thumb:hover {
+    background-color: #757575; 
+
+  }
+ 
+  
+  
+  
+  
+  
 
 
 
