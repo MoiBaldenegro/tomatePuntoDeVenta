@@ -88,11 +88,10 @@ const handleBoard = (value, activeValue, indexValue, positionLine ) => {
                                 ? { marginTop: '160px' }
                                 : redLinePosition === 5
                                 ? { marginTop: '210px' }
-                                : null
-                                
+                                : null   
                             }
-  alt="red-line"
-/>
+                                    alt="red-line"
+                                    />
                         </div>
                         <div className={styling.deployContainer}>
                             <span className={styling.deployItem} onClick={() => handleBoard("catalogo", true, 1, 1)} > categorias </span>

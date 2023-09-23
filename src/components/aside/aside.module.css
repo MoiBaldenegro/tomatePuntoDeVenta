@@ -137,13 +137,15 @@
  .itemsDeployContainer{
     display: flex;
     margin-left: 3vw;
+    position: relative;
  }
 
  .redLine{
-    position: absolute;
     margin-left: -4px;
     margin-top: 5px;
+    position: absolute;
  }
+
 
  
   
