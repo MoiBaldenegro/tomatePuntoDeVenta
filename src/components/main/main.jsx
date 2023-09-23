@@ -38,16 +38,16 @@ export default function Main () {
 
 const [ main, setMain ] = useState("");
 const [ active, setActive ] = useState(true)
-//const [ index, setIndex] = useState(0);
+const [ indexing, setIndexing] = useState(undefined);
 
-const handleBoard = (value, activeValue, /*indexValue */) => {
+const handleBoard = (value, activeValue, indexValue ) => {
     setMain(value)
     setActive(activeValue)
-   // setIndex(indexValue)
+    setIndexing(indexValue)
 }; 
     const modeOne = styles.containerWith
     const modeTwo = styles.container
-    //const classNameSelected = 
+    const classNameSelected = styles.selectedItem
 
     return(
         <section className={style.container}>
@@ -58,7 +58,7 @@ const handleBoard = (value, activeValue, /*indexValue */) => {
                     <img src={dashboard} className={styles.icon} alt="dashboard-icon" />
                     <span>Dashboard</span>
                 </div>
-                <div className={modeOne}  onClick={() => handleBoard("catalogo", !active)}>
+                <div className={indexing === 1 ? modeOne : classNameSelected}  onClick={() => handleBoard("catalogo", !active, 1)}>
                     <div className={styles.iconContainer}>
                         <img src={catalogo}  className={styles.icon} alt="catalogo-icon" />
                         <span >Catalogo</span>
@@ -75,7 +75,7 @@ const handleBoard = (value, activeValue, /*indexValue */) => {
                         <span className={styling.deployItem}> Menus y recetas </span>
                     </div> : null
                 } 
-                <div className={modeOne} onClick={() => handleBoard("ventas", false)}>
+                <div className={indexing === 2 ? modeOne : classNameSelected} onClick={() => handleBoard("ventas", false, 2)}>
                     <div>
                         <img src={ventas} className={styles.icon} alt="ventas-icon" />
                         <span>Ventas</span>
@@ -86,14 +86,14 @@ const handleBoard = (value, activeValue, /*indexValue */) => {
                     <img src={ventasType} className={styles.icon} alt="tipos-de-venta" />
                     <span>Tipos de venta</span>
                 </div>
-                <div className={modeOne} onClick={() => handleBoard("promociones", false)}>
+                <div className={indexing === 4 ? modeOne : classNameSelected} onClick={() => handleBoard("promociones", false, 4)}>
                     <div>
                         <img src={promociones} className={styles.icon} alt="promociones" />
                         <span>Promociones</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeOne} onClick={() => handleBoard("caja", false)}>
+                <div className={indexing === 5 ? modeOne : classNameSelected} onClick={() => handleBoard("caja", false, 5)}>
                     <div >
                         <img src={caja} className={styles.icon} alt="caja" />
                         <span>Caja</span>
@@ -104,21 +104,21 @@ const handleBoard = (value, activeValue, /*indexValue */) => {
                     <img src={reservaciones} className={styles.icon} alt="reservaciones" />
                     <span>Reservaciones</span>
                 </div>
-                <div className={modeOne} onClick={() => handleBoard("tableros", false)}>
+                <div className={indexing === 7 ? modeOne : classNameSelected} onClick={() => handleBoard("tableros", false, 7)}>
                     <div >
                         <img src={tableros} className={styles.icon} alt="tableros" />
                         <span>Tableros</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeOne} onClick={() => handleBoard("usuarios", false)}>
+                <div className={indexing === 8 ? modeOne : classNameSelected} onClick={() => handleBoard("usuarios", false, 8)}>
                     <div >
                         <img src={usuarios} className={styles.icon} alt="usuarios" />
                         <span>Usuarios</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeOne} onClick={() => handleBoard("mesas", false)}>
+                <div className={indexing === 9 ? modeOne : classNameSelected} onClick={() => handleBoard("mesas", false, 9)}>
                     <div >
                         <img src={mesas} className={styles.icon} alt="mesas" />
                         <span>Mesas</span>

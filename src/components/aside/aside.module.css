@@ -24,10 +24,11 @@
     margin-top: 25px;
 }
 .container{
+    padding: 3px;
     display: flex;
     justify-content:flex-start;
     align-items: center;
-     width: 310px;
+    width: 310px;
     height:46px;
     padding: 8px, 16px, 8px, 16px;
     border-radius: 8px;
@@ -40,12 +41,13 @@
     align-items: center;
     display: flex;
     justify-content:space-between;
-     width: 310px;
+    width: 310px;
     height:46px;
     padding: 8px, 16px, 8px, 16px;
     border-radius: 8px;
     margin: 8px;
     transition: 200ms;
+    background-color: #F9F9F933;
 }
  span{
     margin-left: 10px;
@@ -68,9 +70,23 @@
 }
 /* HOVER */
 .container:hover{
-    background-color:  #F9F9F933;
+    background-color:  #f9f9f915;
 }
 .containerWith:hover{
- background-color:  #F9F9F933;
+ background-color:  #f9f9f911;
 }
+.selectedItem{
+    padding: 3px;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    width: 310px;
+    height:46px;
+    padding: 8px, 16px, 8px, 16px;
+    border-radius: 8px;
+    margin: 8px;
+    transition: 200ms;
+}
+
+
 
