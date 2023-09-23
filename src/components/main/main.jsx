@@ -48,13 +48,14 @@ const handleBoard = (value, activeValue, indexValue ) => {
     const modeOne = styles.containerWith
     const modeTwo = styles.container
     const classNameSelected = styles.selectedItem
+    const classNameSelectedAlter = styles.selectedItemAlter
 
     return(
         <section className={style.container}>
             <div>
             <aside className={styles.aside}>
             <div className={styles.sectionOne}>
-                <div className={modeTwo} onClick={() => handleBoard("dashboard", false)}>
+                <div className={indexing === 0 ? modeTwo : classNameSelectedAlter} onClick={() => handleBoard("dashboard", false, 0)}>
                     <img src={dashboard} className={styles.icon} alt="dashboard-icon" />
                     <span>Dashboard</span>
                 </div>
@@ -82,7 +83,7 @@ const handleBoard = (value, activeValue, indexValue ) => {
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeTwo} onClick={() => handleBoard("ventaTypes", false)}>
+                <div className={indexing === 3 ? modeTwo : classNameSelectedAlter} onClick={() => handleBoard("ventaTypes", false, 3)}>
                     <img src={ventasType} className={styles.icon} alt="tipos-de-venta" />
                     <span>Tipos de venta</span>
                 </div>
@@ -100,7 +101,7 @@ const handleBoard = (value, activeValue, indexValue ) => {
                     </div>
                     <img src={arrow}  className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeTwo} onClick={() => handleBoard("reservaciones", false)}>
+                <div className={indexing === 6 ? modeTwo : classNameSelectedAlter} onClick={() => handleBoard("reservaciones", false, 6)}>
                     <img src={reservaciones} className={styles.icon} alt="reservaciones" />
                     <span>Reservaciones</span>
                 </div>
@@ -125,7 +126,7 @@ const handleBoard = (value, activeValue, indexValue ) => {
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={modeTwo} onClick={() => handleBoard("reportes", false)}>
+                <div className={indexing === 10 ? modeTwo : classNameSelectedAlter}  onClick={() => handleBoard("reportes", false, 10)}>
                     <img src={reportes} className={styles.icon} alt="reportes" />
                     <span>Reportes</span>
                 </div>

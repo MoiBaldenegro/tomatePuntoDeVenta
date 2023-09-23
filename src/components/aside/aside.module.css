@@ -1,6 +1,4 @@
 
- 
- 
 .aside{
     display: flex;
     flex-direction: column;
@@ -35,6 +33,7 @@
     margin: 8px;
     padding: 3px;
     transition: 200ms;  
+    background-color: #F9F9F933;
 }
 .containerWith{
     padding: 3px;
@@ -68,13 +67,6 @@
     height: 7px; 
     margin-right: 5px;
 }
-/* HOVER */
-.container:hover{
-    background-color:  #f9f9f915;
-}
-.containerWith:hover{
- background-color:  #f9f9f911;
-}
 .selectedItem{
     padding: 3px;
     align-items: center;
@@ -86,7 +78,29 @@
     border-radius: 8px;
     margin: 8px;
     transition: 200ms;
+
 }
+
+.selectedItemAlter{
+    padding: 3px;
+    align-items: center;
+    display: flex;
+    justify-content:flex-start;
+    width: 310px;
+    height:46px;
+    padding: 8px, 16px, 8px, 16px;
+    border-radius: 8px;
+    margin: 8px;
+    transition: 200ms;
+}
+/* HOVER */
+.container:hover, 
+.containerWith:hover, 
+.selectedItem:hover, 
+.selectedItemAlter:hover{
+    background-color:  #f9f9f915;
+}
+
 
 
 
