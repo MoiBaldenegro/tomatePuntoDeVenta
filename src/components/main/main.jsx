@@ -38,23 +38,27 @@ export default function Main () {
 
 const [ main, setMain ] = useState("");
 const [ active, setActive ] = useState(true)
+//const [ index, setIndex] = useState(0);
 
-const handleBoard = (value, activeValue) => {
+const handleBoard = (value, activeValue, /*indexValue */) => {
     setMain(value)
     setActive(activeValue)
-   
+   // setIndex(indexValue)
 }; 
+    const modeOne = styles.containerWith
+    const modeTwo = styles.container
+    //const classNameSelected = 
 
     return(
         <section className={style.container}>
             <div>
             <aside className={styles.aside}>
             <div className={styles.sectionOne}>
-                <div className={styles.container} onClick={() => handleBoard("dashboard", false)}>
+                <div className={modeTwo} onClick={() => handleBoard("dashboard", false)}>
                     <img src={dashboard} className={styles.icon} alt="dashboard-icon" />
                     <span>Dashboard</span>
                 </div>
-                <div className={styles.containerWith}  onClick={() => handleBoard("catalogo", !active)}>
+                <div className={modeOne}  onClick={() => handleBoard("catalogo", !active)}>
                     <div className={styles.iconContainer}>
                         <img src={catalogo}  className={styles.icon} alt="catalogo-icon" />
                         <span >Catalogo</span>
@@ -71,57 +75,57 @@ const handleBoard = (value, activeValue) => {
                         <span className={styling.deployItem}> Menus y recetas </span>
                     </div> : null
                 } 
-                <div className={styles.containerWith} onClick={() => handleBoard("ventas", false)}>
+                <div className={modeOne} onClick={() => handleBoard("ventas", false)}>
                     <div>
                         <img src={ventas} className={styles.icon} alt="ventas-icon" />
                         <span>Ventas</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container} onClick={() => handleBoard("ventaTypes", false)}>
+                <div className={modeTwo} onClick={() => handleBoard("ventaTypes", false)}>
                     <img src={ventasType} className={styles.icon} alt="tipos-de-venta" />
                     <span>Tipos de venta</span>
                 </div>
-                <div className={styles.containerWith} onClick={() => handleBoard("promociones", false)}>
+                <div className={modeOne} onClick={() => handleBoard("promociones", false)}>
                     <div>
                         <img src={promociones} className={styles.icon} alt="promociones" />
                         <span>Promociones</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith} onClick={() => handleBoard("caja", false)}>
+                <div className={modeOne} onClick={() => handleBoard("caja", false)}>
                     <div >
                         <img src={caja} className={styles.icon} alt="caja" />
                         <span>Caja</span>
                     </div>
                     <img src={arrow}  className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container} onClick={() => handleBoard("reservaciones", false)}>
+                <div className={modeTwo} onClick={() => handleBoard("reservaciones", false)}>
                     <img src={reservaciones} className={styles.icon} alt="reservaciones" />
                     <span>Reservaciones</span>
                 </div>
-                <div className={styles.containerWith} onClick={() => handleBoard("tableros", false)}>
+                <div className={modeOne} onClick={() => handleBoard("tableros", false)}>
                     <div >
                         <img src={tableros} className={styles.icon} alt="tableros" />
                         <span>Tableros</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith} onClick={() => handleBoard("usuarios", false)}>
+                <div className={modeOne} onClick={() => handleBoard("usuarios", false)}>
                     <div >
                         <img src={usuarios} className={styles.icon} alt="usuarios" />
                         <span>Usuarios</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.containerWith} onClick={() => handleBoard("mesas", false)}>
+                <div className={modeOne} onClick={() => handleBoard("mesas", false)}>
                     <div >
                         <img src={mesas} className={styles.icon} alt="mesas" />
                         <span>Mesas</span>
                     </div>
                     <img src={arrow} className={styles.arrowIcon} alt="icon" />
                 </div>
-                <div className={styles.container} onClick={() => handleBoard("reportes", false)}>
+                <div className={modeTwo} onClick={() => handleBoard("reportes", false)}>
                     <img src={reportes} className={styles.icon} alt="reportes" />
                     <span>Reportes</span>
                 </div>
